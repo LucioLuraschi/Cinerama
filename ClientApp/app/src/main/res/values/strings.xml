@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cinerama</string>
+    <string-array name="spinner">
+        <item>Reservation 1</item>
+        <item>Reservation 2</item>
+        <item>Reservation 3</item>
+        <item>Reservation 4</item>
+        <item>Reservation 5</item>
+        <item>Reservation 6</item>
+    </string-array>
+</resources>
