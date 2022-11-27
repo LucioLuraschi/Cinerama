@@ -17,7 +17,7 @@ public class MovieDetails extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Button button = (Button) findViewById(R.id.button6);
-        Intent intent = new Intent(this, Activity3.class);
+        Intent intent = new Intent(this, TakeMySeat.class);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
