@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/qrCodeImage"
         android:layout_width="392dp"
         android:layout_height="362dp"
         app:layout_constraintBottom_toBottomOf="parent"

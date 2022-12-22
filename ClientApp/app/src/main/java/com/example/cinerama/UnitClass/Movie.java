@@ -7,13 +7,13 @@ public class Movie {
 
     private String name;
     private String nameDirector;
-    private Date releaserDate;
+    private Date releaseDate;
     private Integer note;
 
     public Movie(String name, String nameDirector, Date releaserDate, Integer note) {
         this.name = name;
         this.nameDirector = nameDirector;
-        this.releaserDate = releaserDate;
+        this.releaseDate = releaserDate;
         this.note = note;
     }
 
@@ -33,12 +33,12 @@ public class Movie {
         this.nameDirector = nameDirector;
     }
 
-    public Date getReleaserDate() {
-        return releaserDate;
+    public Date getReleaseDate() {
+        return releaseDate;
     }
 
-    public void setReleaserDate(Date releaserDate) {
-        this.releaserDate = releaserDate;
+    public void setReleaseDate(Date releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
     public Integer getNote() {
