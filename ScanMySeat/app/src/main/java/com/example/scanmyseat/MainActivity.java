@@ -4,12 +4,16 @@ package com.example.scanmyseat;
 import static android.graphics.ImageFormat.YUV_420_888;
 import static android.graphics.ImageFormat.YUV_422_888;
 import static android.graphics.ImageFormat.YUV_444_888;
+import static android.view.Surface.ROTATION_270;
+import static android.view.Surface.ROTATION_90;
 
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.hardware.camera2.CameraCharacteristics;
 import android.os.Bundle;
 import android.util.Size;
+import android.view.Surface;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -56,20 +60,16 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
         button.setVisibility(View.INVISIBLE);
 
-
-        //check camera permissions
+        //A pop-up is displayed and asks for the permissions of using camera
         if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED){
             initCamera();
         }else{
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA},101);
         }
-
         cameraProviderListenableFuture = ProcessCameraProvider.getInstance(this);
-
-
     }
 
-    //initialize the camera
+    //Initialize the camera
     private void initCamera(){
         cameraProviderListenableFuture = ProcessCameraProvider.getInstance(MainActivity.this);
         cameraProviderListenableFuture.addListener(new Runnable() {
@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 } catch (ExecutionException | InterruptedException e) {
                     e.printStackTrace();
                 }
-
             }
         }, ContextCompat.getMainExecutor(MainActivity.this));
     }
@@ -97,11 +96,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*
+    We initialize the camera process (launch camera, analyze the image viewed in the surface, end of the instance)
+    We initialize the settings of the camera (horizontal or vertical view)
+    We analyze then the QRCode
+     */
+
     private void bindImageAnalysis(ProcessCameraProvider processCameraProvider){
         Preview preview = new Preview.Builder().build();
         CameraSelector cameraSelector = new CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_BACK).build();
         preview.setSurfaceProvider(previewView.getSurfaceProvider());
-
 
         ImageAnalysis imageAnalysis =new ImageAnalysis.Builder().setTargetResolution(new Size(1280,720))
                 .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST).build();
@@ -180,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
         preview.setSurfaceProvider(previewView.getSurfaceProvider());
         processCameraProvider.bindToLifecycle(this,cameraSelector,imageAnalysis,preview);
 */
+
     }
 }
 

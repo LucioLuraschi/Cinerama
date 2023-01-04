@@ -1,6 +1,7 @@
 package com.example.scanmyseat;
 
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -33,7 +34,6 @@ public class ResumeQrCode extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         movieName = findViewById(R.id.movieName);
-        releaseYear = findViewById(R.id.releaseDate);
         room = findViewById(R.id.room);
         dateShow = findViewById(R.id.dateShow);
         hourShow = findViewById(R.id.hourShow);
@@ -48,11 +48,11 @@ public class ResumeQrCode extends AppCompatActivity {
 
         //display the informations of the ticket
         movieName.setText(getIntent().getStringExtra("ticket"));
-        releaseYear.setText("ticket");
-        room.setText("ticket");
-        dateShow.setText("ticket");
-        hourShow.setText("ticket");
-        isValidOrNot.setText("ticket");
+        room.setText("Room n ° ");
+        dateShow.setText("Date Show");
+        hourShow.setText("Hour Show");
+        isValidOrNot.setText("Valid ?");
+
 
         //check if it is available with the date and hour (access to the cinema 2h hour before the movie
         //until 30 min after the beginning of the movie
@@ -62,11 +62,11 @@ public class ResumeQrCode extends AppCompatActivity {
             if(hourshow - 2 <= hourshow and hourshow <= hourshow + 1){
                 isValidOrNot.setText("Valid");
                 imageView.setImageResource(R.drawable.valid);
-                tableRow.setBackgroundColor(Color.parseColor("green"));
+                tableRow.setBackgroundResource(R.drawable.row_shape_valid);
             } else {
                 isValidOrNot.setText("No Valid");
                 imageView.setImageResource(R.drawable.novalid);
-                tableRow.setBackgroundColor(Color.parseColor("red"));
+                tableRow.setBackgroundResource(R.drawable.row_shape_novalid);
             }
         }
          */

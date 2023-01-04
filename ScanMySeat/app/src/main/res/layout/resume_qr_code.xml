@@ -3,25 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="Ticket Details"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:layout_height="match_parent"
+    android:background="@drawable/ticket">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="194dp"
         android:layout_height="250dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="228dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/movie" />
@@ -30,41 +20,37 @@
         android:id="@+id/movieName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="188dp"
+        android:gravity="center_horizontal"
         android:text="Title Movie"
+        android:textColor="#E9DEC8"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/releaseDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Year"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/movieName" />
 
     <TextView
         android:id="@+id/room"
         android:layout_width="67dp"
         android:layout_height="36dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="8dp"
         android:text="Salle"
-        app:layout_constraintBottom_toTopOf="@+id/dateShow"
+        android:textColor="#E9DEC8"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/dateShow"
         android:layout_width="65dp"
         android:layout_height="38dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="20dp"
         android:text="Date"
+        android:textColor="#E9DEC8"
+        android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/tableRow"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -72,32 +58,39 @@
         android:id="@+id/hourShow"
         android:layout_width="65dp"
         android:layout_height="36dp"
-        android:layout_marginEnd="112dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="20dp"
         android:text="Heure de diffusion"
+        android:textColor="#E9DEC8"
+        android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/tableRow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.784"
-        app:layout_constraintStart_toEndOf="@+id/dateShow" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TableRow
         android:id="@+id/tableRow"
-        android:layout_width="381dp"
-        android:layout_height="82dp"
+        android:layout_width="281dp"
+        android:layout_height="81dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/row_shape_valid"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/isValidOrNot"
-            android:layout_width="288dp"
+            android:layout_width="182dp"
             android:layout_height="80dp"
-            android:text="Valid ?" />
+            android:layout_marginStart="10dp"
+            android:gravity="center_horizontal"
+            android:text="Valid ?"
+            android:textColor="#E9DEC8"
+            android:textSize="50sp"
+            android:textStyle="bold|italic" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
+            android:layout_width="60dp"
+            android:layout_height="75dp"
             app:srcCompat="@drawable/valid" />
     </TableRow>
 
