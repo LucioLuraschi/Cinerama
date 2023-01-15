@@ -1,17 +1,30 @@
 package com.example.cinerama.UnitClass;
 
 
+import androidx.annotation.NonNull;
+
 import java.util.Date;
 
 public class Session {
-    Movie movie;
-    private Date showDate;
-    private String hourShow;
 
-    public Session(Movie movie, Date showDate, String hourShow) {
+    private String id;
+    private String movieId;
+    private Movie movie;
+    private String showDate;
+    private Boolean isFull;
+
+    public Session(Movie movie, String showDate, String id, Boolean isFull) {
         this.movie = movie;
         this.showDate = showDate;
-        this.hourShow = hourShow;
+        this.id = id;
+        this.isFull = isFull;
+    }
+
+    public Session(String movieId, String showDate, String id, Boolean isFull) {
+        this.movieId = movieId;
+        this.showDate = showDate;
+        this.id = id;
+        this.isFull = isFull;
     }
 
     public Movie getMovie() {
@@ -22,19 +35,33 @@ public class Session {
         this.movie = movie;
     }
 
-    public Date getShowDate() {
+    public String getShowDate() {
         return showDate;
     }
 
-    public void setShowDate(Date showDate) {
+    public void setShowDate(String showDate) {
         this.showDate = showDate;
     }
 
-    public String getHourShow() {
-        return hourShow;
+    public String getId() {
+        return id;
     }
 
-    public void setHourShow(String hourShow) {
-        this.hourShow = hourShow;
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getMovieId() {
+        return movieId;
+    }
+
+    public Boolean getFull() {
+        return isFull;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return showDate;
     }
 }

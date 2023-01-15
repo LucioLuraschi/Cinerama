@@ -14,9 +14,12 @@ public class TakeMySeat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.take_my_seat_activity);
 
+        Intent intentFromSessionSelection = getIntent();
+        String sessionID = intentFromSessionSelection.getStringExtra("sessionID");
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ImageButton imageButton = (ImageButton) findViewById(R.id.seat1);
+        ImageButton imageButton = (ImageButton) findViewById(R.id.seatC1);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,7 +39,7 @@ public class TakeMySeat extends AppCompatActivity {
             }
         });
 
-        ImageButton imageButton2 = (ImageButton) findViewById(R.id.seat2);
+        ImageButton imageButton2 = (ImageButton) findViewById(R.id.seatC2);
         imageButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +53,7 @@ public class TakeMySeat extends AppCompatActivity {
             }
         });
 
-        ImageButton imageButton3 = (ImageButton) findViewById(R.id.seat3);
+        ImageButton imageButton3 = (ImageButton) findViewById(R.id.seatC3);
         imageButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,7 +67,7 @@ public class TakeMySeat extends AppCompatActivity {
             }
         });
 
-        ImageButton imageButton4 = (ImageButton) findViewById(R.id.seat4);
+        ImageButton imageButton4 = (ImageButton) findViewById(R.id.seatC4);
         imageButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

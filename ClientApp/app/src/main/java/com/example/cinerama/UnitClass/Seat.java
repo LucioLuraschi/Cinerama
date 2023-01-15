@@ -1,21 +1,22 @@
 package com.example.cinerama.UnitClass;
 
-public class Seat {
-    private int id;
-    private String name;
-    private boolean status;
 
-    public Seat(int id, String name, boolean status) {
+public class Seat {
+    private String id;
+    private String name;
+    private Boolean isOccupied;
+
+    public Seat(String id, String name, Boolean isOccupied) {
         this.id = id;
         this.name = name;
-        this.status = status;
+        this.isOccupied = isOccupied;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -27,11 +28,11 @@ public class Seat {
         this.name = name;
     }
 
-    public boolean isStatus() {
-        return status;
+    public boolean isOccupied() {
+        return isOccupied;
     }
 
-    public void setStatus(boolean status) {
-        this.status = status;
+    public void setIsOccupied(boolean isOccupied) {
+        this.isOccupied = isOccupied;
     }
 }

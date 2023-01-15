@@ -2,50 +2,57 @@ package com.example.cinerama.UnitClass;
 
 
 import java.util.Date;
+import java.util.List;
 
 public class Movie {
 
-    private String name;
-    private String nameDirector;
-    private Date releaseDate;
-    private Integer note;
+    private final String name;
+    private final String nameDirector;
+    private final String releaseDate;
+    private final String movieLast;
+    private final List<String> categories;
+    private final String synopsis;
+    private final String filmID;
 
-    public Movie(String name, String nameDirector, Date releaserDate, Integer note) {
+    public Movie(String name, String nameDirector, String releaserDate, String movieLast, List<String> categories, String synopsis, String id) {
         this.name = name;
         this.nameDirector = nameDirector;
         this.releaseDate = releaserDate;
-        this.note = note;
+        this.movieLast = movieLast;
+        this.categories = categories;
+        this.synopsis = synopsis;
+        this.filmID = id;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getNameDirector() {
         return nameDirector;
     }
 
-    public void setNameDirector(String nameDirector) {
-        this.nameDirector = nameDirector;
-    }
-
-    public Date getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
-        this.releaseDate = releaseDate;
+    public String getMovieLast() {
+        return movieLast;
     }
 
-    public Integer getNote() {
-        return note;
+    public String getSynopsis() {
+        return synopsis;
     }
 
-    public void setNote(Integer note) {
-        this.note = note;
+    public String getCategoriesString() {
+        StringBuilder categories = new StringBuilder();
+        for (String category: this.categories) {
+            categories.append(category).append(" ");
+        }
+        return categories.toString().trim();
+    }
+
+    public String getFilmID() {
+        return filmID;
     }
 }

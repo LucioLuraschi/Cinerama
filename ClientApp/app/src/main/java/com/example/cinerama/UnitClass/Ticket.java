@@ -3,27 +3,27 @@ package com.example.cinerama.UnitClass;
 import java.util.TreeMap;
 
 public class Ticket {
-    private TreeMap<Session,Seat> treeMap;
-    private Float price;
+    private Session session;
+    private Seat seat;
 
-    public Ticket(TreeMap<Session, Seat> treeMap, Float price) {
-        this.treeMap = treeMap;
-        this.price = price;
+    public Ticket(Seat seat, Session session) {
+        this.seat = seat;
+        this.session = session;
     }
 
-    public TreeMap<Session, Seat> getTreeMap() {
-        return treeMap;
+    public Session getSession() {
+        return session;
     }
 
-    public void setTreeMap(TreeMap<Session, Seat> treeMap) {
-        this.treeMap = treeMap;
+    public void setSession(Session session) {
+        this.session = session;
     }
 
-    public Float getPrice() {
-        return price;
+    public Seat getSeat() {
+        return seat;
     }
 
-    public void setPrice(Float price) {
-        this.price = price;
+    public void setSeat(Seat seat) {
+        this.seat = seat;
     }
 }

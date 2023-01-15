@@ -10,70 +10,101 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="List of movies"
+        android:fontFamily="sans-serif-black"
+        android:text="Movies' List"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="See Movie Details"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageButton
+        android:id="@+id/Film1"
+        android:layout_width="157dp"
+        android:layout_height="214dp"
+        android:layout_marginTop="70dp"
+        android:contentDescription="TODO"
+        android:onClick="onClick"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.974" />
-
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="152dp"
-        android:layout_height="126dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="136dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/movie"
-        android:contentDescription="TODO" />
-
-    <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="152dp"
-        android:layout_height="126dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/movie"
-        android:contentDescription="TODO" />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="152dp"
-        android:layout_height="126dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:contentDescription="TODO"
-        android:onClick="onClick"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView20"
         app:srcCompat="@drawable/movie"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="152dp"
-        android:layout_height="126dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="32dp"
+        android:id="@+id/Film2"
+        android:layout_width="157dp"
+        android:layout_height="214dp"
+        android:layout_marginTop="70dp"
         android:contentDescription="TODO"
         android:onClick="onClick"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView21"
+        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:srcCompat="@drawable/movie"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/Film3"
+        android:layout_width="157dp"
+        android:layout_height="214dp"
+        android:layout_marginBottom="80dp"
+        android:contentDescription="TODO"
+        android:onClick="onClick"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/movie"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/TitreFilm1"
+        android:layout_width="157dp"
+        android:layout_height="50dp"
+        android:text="Titre Film 1"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Film1" />
+
+    <TextView
+        android:id="@+id/TitreFilm2"
+        android:layout_width="157dp"
+        android:layout_height="50dp"
+        android:text="Titre Film 2"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Film2" />
+
+    <TextView
+        android:id="@+id/TitreFilm3"
+        android:layout_width="157dp"
+        android:layout_height="50dp"
+        android:text="Titre Film 3"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Film3" />
+
+    <TextView
+        android:id="@+id/descMovieList"
+        android:layout_width="347dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:text="Please select the movie you want to watch or if you want to have more information about it"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -86,7 +86,7 @@
             </intent-filter>
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MovieDetails" />
+                android:value=".SeeMovieList" />
         </activity>
 
     </application>
