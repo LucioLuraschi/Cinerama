@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "391282067082",
+    "firebase_url": "https://cinerama-fa8e6-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "cinerama-fa8e6",
+    "storage_bucket": "cinerama-fa8e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391282067082:android:0010985b76eeaea32b8f73",
+        "android_client_info": {
+          "package_name": "com.example.cinerama"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391282067082-8j285nudvsuko5ojv2brr061e29b9b7t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTdPNqu-unhAGFM7b6jCCBcV81Z51JAbs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391282067082-8j285nudvsuko5ojv2brr061e29b9b7t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391282067082:android:8a351279c8ae39b82b8f73",
+        "android_client_info": {
+          "package_name": "com.example.scanmyseat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391282067082-8j285nudvsuko5ojv2brr061e29b9b7t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTdPNqu-unhAGFM7b6jCCBcV81Z51JAbs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391282067082-8j285nudvsuko5ojv2brr061e29b9b7t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

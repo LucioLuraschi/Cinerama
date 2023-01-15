@@ -5,11 +5,17 @@ public class Seat {
     private String id;
     private String name;
     private Boolean isOccupied;
+    private Integer androidID;
 
     public Seat(String id, String name, Boolean isOccupied) {
         this.id = id;
         this.name = name;
         this.isOccupied = isOccupied;
+    }
+
+    public Seat(String id, int androidID) {
+        this.id = id;
+        this.androidID = androidID;
     }
 
     public String getId() {
@@ -34,5 +40,13 @@ public class Seat {
 
     public void setIsOccupied(boolean isOccupied) {
         this.isOccupied = isOccupied;
+    }
+
+    public void setAndroidID(Integer androidID) {
+        this.androidID = androidID;
+    }
+
+    public Integer getAndroidID() {
+        return androidID;
     }
 }

@@ -131,6 +131,8 @@ public class MovieDetails extends AppCompatActivity {
                                             ).show();
                                         } else {
                                             intent.putExtra("sessionID", selectedSession.getId());
+                                            intent.putExtra("filmTitle", title);
+                                            intent.putExtra("sessionTime", selectedSession.toString());
                                             startActivity(intent);
                                         }
                                     }
