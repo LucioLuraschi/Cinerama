@@ -20,9 +20,9 @@ pour les 2 applications qui seront décrites ci-dessous
 
 ### L'application utilisateur
 L'application utilisateur est une application déstinée à ceux qui veulent acheter une place de cinéma 
-pour les films qui sont prposés par Cinérama.
+pour les films qui sont proposés par Cinérama.
 
 Ils pourront consulter le catalogue de film, les différentes scéances proposés pour ces films, ainsi que la possibilité d'acheter une place pour aller voir le film choisi sur une séance sélectionnée.
 
-### L'application de gestion
-L'application de gestion permet au cinéma Cinérama de pouvoir gérer les différents films du ciménéma et de vérifier les tickets des clients ayant acheter une place pour aller voir un film
+### L'application de vérification
+L'application de vérification permet aux employés du cinéma Cinérama de pouvoir vérifier les tickets des clients ayant acheter une place pour aller voir un film. Le contrôle des tickets consiste à scanner un QrCode généré depuis l'application utilisateur.
