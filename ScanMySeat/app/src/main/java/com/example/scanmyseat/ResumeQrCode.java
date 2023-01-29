@@ -56,13 +56,13 @@ public class ResumeQrCode extends AppCompatActivity {
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         if (documentSnapshot.exists()) {
                             FirebaseFirestore.getInstance().collection("session")
-                                    .document(documentSnapshot.getString("id_session"))
+                                    .document(documentSnapshot.getString("id_seance"))
                                             .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                                         @Override
                                         public void onSuccess(DocumentSnapshot documentSnapshot) {
                                             movieName.setText(getIntent().getStringExtra("ticket"));
                                             room.setText("Room n ° 1");
-                                            dateShow.setText(documentSnapshot.getDate("diffusion").toString());
+                                            dateShow.setText(documentSnapshot.getTimestamp("diffusion").toString());
                                             //check if it is available with the date and hour (access to the cinema 2h hour before the movie
                                             //until 30 min after the beginning of the movie
                                             /*
